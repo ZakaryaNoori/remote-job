@@ -43,7 +43,6 @@ import gsap from "gsap";
 export default {
   name: 'IndexPage',
   mounted () {
-    let x, y;
     // get mouse position
     document.addEventListener('mousemove', (e) => {
       x = e.clientX
@@ -106,12 +105,13 @@ export default {
     })
 
     // animate the illustration
-    // gsap.from(".illustration", {
-    //   opacity: 0,
-    //   duration: 3,
-    //   x: 50,
-    //   ease: "power3.inOut",
-    // })
+    gsap.from(".illustration", {
+      opacity: 0,
+      duration: 1.5,
+      x: 100,
+      scale: 0.9,
+      ease: "power3.inOut",
+    })
 
   }
 }
